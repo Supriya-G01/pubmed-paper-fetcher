@@ -1,0 +1,18 @@
+[project]
+name = "pubmed-paper-fetcher"
+version = "0.1.0"
+description = "A CLI tool to fetch pubmed papers"
+authors = [
+    { name = "Supriya Gudise" }
+]
+readme = "README.md"
+requires-python = "^3.10"
+dependencies = [
+    "requests (>=2.32.4,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{ include = "papers" }]
+
+[tool.poetry.scripts]
+get-papers-list = "cli:main"
